@@ -1,0 +1,14 @@
+<!-- código exemplo INPUT -->
+<h3>Item INPUT lendo do pai</h3>
+<p>
+  Today's item: {{item}}
+</p>
+
+
+<!-- código exemplo do OUTPUT -->
+<h3>Item OUTPUT enviando informação ao pai</h3>
+<label for="item-input">Add an item:</label>
+<input type="text" id="item-input" #newItem>
+<button type="button" (click)="addNewItem(newItem.value)">
+  Add to parent's list</button>
+
