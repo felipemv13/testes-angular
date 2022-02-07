@@ -1,1 +1,36 @@
-<p>parent-component works!</p>
+<!-- código exemplo INPUT -->
+<!-- <app-item-detail [item]="currentItem"></app-item-detail> -->
+
+<!-- código exemplo OUTPUT -->
+<!-- <app-item-detail (newItemEvent)="addItem($event)"></app-item-detail> -->
+
+<!-- utilizando mesmo componente
+  para não ser exibido repetidos em tela -->
+<!-- código exemplo OUTPUT -->
+<!-- <div>
+  <app-item-detail [item]="currentItem" (newItemEvent)="addItem($event)">
+  </app-item-detail>
+
+  <ul>
+    <li *ngFor="let item of items">{{ item }}</li>
+  </ul>
+  <button type="button" [disabled]="botaoDesativado">Cancelar</button>
+</div> -->
+
+
+
+
+<!--  código exemplo OUTPUT
+      com Angular Material -->
+      <div>
+        <app-item-detail (avisoBotaoCancelar)="validarBotaoEnviar($event)">
+        </app-item-detail>
+
+        <mat-card>
+          <mat-card-content>
+            <section class="example-section">
+              <button mat-button [disabled]="envioMesaDesabilitado">Enviar para Mesa</button>
+            </section>
+          </mat-card-content>
+        </mat-card>
+      </div>

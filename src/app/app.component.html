@@ -1,19 +1,2 @@
-<!-- código exemplo INPUT -->
-<!-- <app-item-detail [item]="currentItem"></app-item-detail> -->
 
-<!-- código exemplo OUTPUT -->
-<!-- <app-item-detail (newItemEvent)="addItem($event)"></app-item-detail> -->
-
-
-<!-- utilizando mesmo componente
-  para não ser exibido repetidos em tela -->
-<!-- código exemplo OUTPUT -->
-<app-item-detail
-  [item]="currentItem"
-  (newItemEvent)="addItem($event)">
-</app-item-detail>
-
-<ul>
-  <li *ngFor="let item of items">{{item}}</li>
-</ul>
-<button type="button" [disabled]="botaoDesativado">Cancelar</button>
+<app-parent-component></app-parent-component>
