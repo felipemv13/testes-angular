@@ -7,6 +7,8 @@ import { Output, EventEmitter, Component, Input } from '@angular/core';
 })
 export class ItemDetailComponent {
 
+checked="true";
+
   // CÓDIGO EXEMPLO INPUT
   @Input()
   item = '';
@@ -21,7 +23,19 @@ export class ItemDetailComponent {
   }
 
 
-  ativarDesativarCancelar() {
-    // implementar lógica de desativar/ativar cancelar
+
+
+  // CÓDIGO EXEMPLO COM ANGULAR MATERIAL
+  primeiroCheckbox = false;
+  segundoCheckbox = false;
+
+  @Output() avisoBotaoCancelar = new EventEmitter<boolean>();
+
+  avisarBotaoCancelar(evento){
+    console.log('primeiroCheckbox',this.primeiroCheckbox);
+    // console.log('segundoCheckbox', this.segundoCheckbox);
+    this.avisoBotaoCancelar.emit(this.primeiroCheckbox);
   }
+
+
 }

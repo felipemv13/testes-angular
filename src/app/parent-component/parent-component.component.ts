@@ -1,15 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-parent-component',
   templateUrl: './parent-component.component.html',
   styleUrls: ['./parent-component.component.scss']
 })
-export class ParentComponentComponent implements OnInit {
+export class ParentComponentComponent {
 
-  constructor() { }
 
-  ngOnInit() {
+  // CÓDIGO EXEMPLO INPUT
+  currentItem = 'Television';
+
+  
+
+  // CÓDIGO EXEMPLO OUTPUT
+  items =  []; //['item1', 'item2', 'item3', 'item4'];
+  botaoDesativado = true;
+
+  addItem(newItem: string) {
+    this.items.push(newItem);
+    this.botaoDesativado = this.items.length <= 0;
+  }
+
+
+
+
+  // CÓDIGO EXEMPLO COM ANGULAR MATERIAL
+  envioMesaDesabilitado = true;
+
+  validarBotaoEnviar(value: boolean) {
+    this.envioMesaDesabilitado = value;
   }
 
 }

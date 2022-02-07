@@ -1,14 +1,30 @@
 <!-- código exemplo INPUT -->
-<h3>Item INPUT lendo do pai</h3>
+<!-- <h3>Item INPUT lendo do pai</h3>
 <p>
   Today's item: {{item}}
-</p>
+</p> -->
+
 
 
 <!-- código exemplo do OUTPUT -->
-<h3>Item OUTPUT enviando informação ao pai</h3>
+<!-- <h3>Item OUTPUT enviando informação ao pai</h3>
 <label for="item-input">Add an item:</label>
 <input type="text" id="item-input" #newItem>
 <button type="button" (click)="addNewItem(newItem.value)">
-  Add to parent's list</button>
+  Add to parent's list</button> -->
 
+
+
+<!--  código exemplo OUTPUT, INPUT
+      com Angular Material -->
+<mat-card>
+  <mat-card-content>
+    <h2 class="example-h2">Checkbox configuration</h2>
+    <section class="example-section">
+      <mat-checkbox class="example-margin" (click)="avisarBotaoCancelar($event)"  [(ngModel)]="primeiroCheckbox">
+        Primeiro Checkbox</mat-checkbox>
+      <mat-checkbox class="example-margin" (click)="avisarBotaoCancelar($event)"  [(ngModel)]="segundoCheckbox">
+        Segundo Checkbox</mat-checkbox>
+    </section>
+  </mat-card-content>
+</mat-card>
