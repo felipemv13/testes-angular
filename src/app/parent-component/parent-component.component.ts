@@ -11,11 +11,11 @@ export class ParentComponentComponent {
   // CÓDIGO EXEMPLO INPUT
   currentItem = 'Television';
 
-  
+
 
   // CÓDIGO EXEMPLO OUTPUT
   items =  []; //['item1', 'item2', 'item3', 'item4'];
-  botaoDesativado = true;
+
 
   addItem(newItem: string) {
     this.items.push(newItem);
@@ -27,9 +27,11 @@ export class ParentComponentComponent {
 
   // CÓDIGO EXEMPLO COM ANGULAR MATERIAL
   envioMesaDesabilitado = true;
+  botaoDesativado = undefined;
 
   validarBotaoEnviar(value: boolean) {
     this.envioMesaDesabilitado = value;
+    this.botaoDesativado = value;
   }
 
 }

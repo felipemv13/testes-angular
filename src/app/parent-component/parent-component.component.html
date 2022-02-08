@@ -23,7 +23,9 @@
 <!--  código exemplo OUTPUT
       com Angular Material -->
       <div>
-        <app-item-detail (avisoBotaoCancelar)="validarBotaoEnviar($event)">
+        <app-item-detail
+          (avisoBotaoCancelar)="validarBotaoEnviar($event)"
+          [estadoBotaoDesativado]="botaoDesativado">
         </app-item-detail>
 
         <mat-card>

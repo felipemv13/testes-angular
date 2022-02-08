@@ -37,5 +37,7 @@ checked="true";
     this.avisoBotaoCancelar.emit(this.primeiroCheckbox);
   }
 
+  @Input() estadoBotaoDesativado = undefined;
+
 
 }
